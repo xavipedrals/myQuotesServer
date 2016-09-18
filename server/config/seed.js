@@ -6,6 +6,7 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import Quote from '../api/quote/quote.model';
+import Author from '../api/author/author.model';
 
 Thing.find({}).remove()
   .then(() => {
@@ -137,4 +138,67 @@ Quote.find({}).remove()
                 author_photo: "https://pbs.twimg.com/profile_images/3781500000856487986/VG25wfXC.jpeg"
             });
     });
+
+Author.find({}).remove()
+    .then(() => {
+        Author.create({
+            name: "Nelson Mandela",
+            photo: "https://pbs.twimg.com/profile_images/643498811118219264/VRQ00g5u.jpg",
+            quotes_count: 1
+        }, {
+            name: "Abraham Lincoln",
+            photo: "https://pbs.twimg.com/profile_images/649320022586691584/VxKYEkEG.jpg",
+            quotes_count: 1
+        }, {
+            name: "Buddha",
+            photo: "https://static-s.aa-cdn.net/img/ios/912702199/d14e1a4a7e8784859bce0883eb3d0966",
+            quotes_count: 1
+        }, {
+            name: "Malcolm X",
+            photo: "https://pbs.twimg.com/profile_images/669655478146740224/IXUkXfxo.png",
+            quotes_count: 1
+        }, {
+            name: "Stephen Hawking",
+            photo: "https://pbs.twimg.com/profile_images/589926106221936640/YjN9bPrP.jpg",
+            quotes_count: 1
+        }, {
+            name: "Marcus Aurelius",
+            photo: "https://pbs.twimg.com/profile_images/626426959329767424/YWRQBSN2.jpg",
+            quotes_count: 1
+        }, {
+            name: "Steve Jobs",
+            photo: "https://pbs.twimg.com/profile_images/587100329986158592/BKaRJuri.jpg",
+            quotes_count: 1
+        }, {
+            name: "Tupac Shakur",
+            photo: "https://pbs.twimg.com/profile_images/666283206274998272/L_M8ndSj.jpg",
+            quotes_count: 1
+        }, {
+            name: "Isaac Newton",
+            photo: "https://pbs.twimg.com/profile_images/659762372639199233/rdS2EJ-5.jpg",
+            quotes_count: 1
+        }, {
+            name: "Ronald Reagan",
+            photo: "https://pbs.twimg.com/profile_images/726834915610775552/PTg0Iyqe.jpg",
+            quotes_count: 1
+        }, {
+            name: "Albert Einstein",
+            photo: "https://pbs.twimg.com/profile_images/661244915725287424/C7vPnSSE.jpg",
+            quotes_count: 1
+        }, {
+            name: "Winston Churchill",
+            photo: "https://pbs.twimg.com/profile_images/571442793/winston-churchill.jpg",
+            quotes_count: 2
+        }, {
+            name: "George Washington",
+            photo: "https://pbs.twimg.com/profile_images/378800000406611362/0bde3f94f02ca5e2664c4c5c14b59d02.png",
+            quotes_count: 1
+        }, {
+            name: "Charles Darwin",
+            photo: "https://pbs.twimg.com/profile_images/3781500000856487986/VG25wfXC.jpeg",
+            quotes_count: 1
+
+    });
+});
+
 
